@@ -7,7 +7,7 @@ import TextEditWorkspace from './TextEditWorkspace.js'
 export class EditScreen extends Component {
     constructor(props) {
         super(props);
-
+        console.log(this.props)
         // DISPLAY WHERE WE ARE
         console.log("\tEditScreen constructor");
 
