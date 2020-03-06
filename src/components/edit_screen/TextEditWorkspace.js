@@ -6,12 +6,22 @@ class TextEditWorkspace extends Component {
         const styles = {
             container: {
                 color: this.props.logo.textColor,
-                fontSize: this.props.logo.fontSize + "pt",
-                backgroundColor : this.props.logo.backgroundColor
+                fontSize: this.props.logo.fontSize + "%",
+                backgroundColor : this.props.logo.backgroundColor,
+                borderColor : this.props.logo.borderColor,
+                borderRadius : this.props.logo.borderRadius + "px",
+                borderWidth : this.props.logo.borderWidth + "px",
+                borderStyle : "solid",
+                padding : this.props.logo.padding + "px",
+                margin : this.props.logo.margin + "px",
+                left : "40%",
+                position : "absolute",
+                width : "auto",
+                // overflow : "scroll"
             }
         }
         return (
-            <div className="col s8"
+            <div className="col s8" 
                 style={ styles.container }>
                 {this.props.logo.text}
             </div>
