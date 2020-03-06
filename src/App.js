@@ -23,9 +23,9 @@ export const TransactionType = {
 export const LogoDefaults = {
   TEXT : "goLogoLo Logo",
   TEXT_COLOR : "#FF0000",
-  FONT_SIZE : 24,
-  BACKGROUND_COLOR : "blue",
-  BORDER_COLOR: "green",
+  FONT_SIZE : 100,
+  BACKGROUND_COLOR : "#00FFFF",
+  BORDER_COLOR: "#8A2BE2",
   BORDER_RADIUS: 8,
   BORDER_WIDTH: 10,
   PADDING: 0,

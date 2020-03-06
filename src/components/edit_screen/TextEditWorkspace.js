@@ -14,7 +14,8 @@ class TextEditWorkspace extends Component {
                 borderStyle : "solid",
                 padding : this.props.logo.padding + "px",
                 margin : this.props.logo.margin + "px",
-                left : "40%",
+                left : "39%",
+                right : "auto",
                 position : "absolute",
                 width : "auto",
                 // overflow : "scroll"
