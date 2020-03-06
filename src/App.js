@@ -28,7 +28,7 @@ export const LogoDefaults = {
   BORDER_COLOR: "green",
   BORDER_RADIUS: 8,
   BORDER_WIDTH: 10,
-  PADDING: 5,
+  PADDING: 0,
   MARGIN: 0
 }
 
