@@ -106,7 +106,7 @@ class TextEditSidebar extends Component {
                             <div className="col s8">
                                 <input type="color"
                                     onChange={this.handleBackgroundColorChange}
-                                    value={this.state.backgroundColor}/>
+                                    value={this.props.logo.backgroundColor}/>
                             </div>
                         </div>
                         <div className="row">
@@ -114,7 +114,7 @@ class TextEditSidebar extends Component {
                             <div className="col s8">
                                 <input type="color"
                                     onChange={this.handleBorderColor}
-                                    value={this.state.borderColor}/>
+                                    value={this.props.logo.borderColor}/>
                             </div>
                         </div>
                         <div className="row">
@@ -122,7 +122,7 @@ class TextEditSidebar extends Component {
                             <div className="col s8">
                                 <input type="range" min="0" max="150" 
                                     onChange={this.handleBorderRadius}
-                                    value={this.state.borderRadius}/>
+                                    value={this.props.logo.borderRadius}/>
                             </div>
                         </div>
                         <div className="row">
@@ -130,7 +130,7 @@ class TextEditSidebar extends Component {
                             <div className="col s8">
                                 <input type="range" min="4" max="50" 
                                     onChange={this.handleBorderWidth}
-                                    value={this.state.borderWidth}/>
+                                    value={this.props.logo.borderWidth}/>
                             </div>
                         </div>
                         <div className="row">
@@ -138,7 +138,7 @@ class TextEditSidebar extends Component {
                             <div className="col s8">
                                 <input type="range" min="0" max="80" 
                                     onChange={this.handlePadding}
-                                    value={this.state.padding}/>
+                                    value={this.props.logo.padding}/>
                             </div>
                         </div>
                         <div className="row">
@@ -146,7 +146,7 @@ class TextEditSidebar extends Component {
                             <div className="col s8">
                                 <input type="range" min="0" max="200" 
                                     onChange={this.handleMargin}
-                                    value={this.state.margin}/>
+                                    value={this.props.logo.margin}/>
                             </div>
                         </div>
                     </div>
