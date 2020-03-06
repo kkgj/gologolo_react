@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Range, Modal, Button} from 'react-materialize'
 
 class TextEditSidebar extends Component {
     constructor(props) {
@@ -95,7 +96,7 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Font Size:</div>
                             <div className="col s8">
-                                <input type="range" min="5" max="55" 
+                                <Range type="range" min="5" max="55" 
                                     onChange={this.handleFontSizeChange}
                                     value={this.props.logo.fontSize} />
                             </div>
@@ -120,7 +121,7 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Border Radius:</div>
                             <div className="col s8">
-                                <input type="range" min="0" max="150" 
+                                <Range type="range" min="0" max="150" 
                                     onChange={this.handleBorderRadius}
                                     value={this.props.logo.borderRadius}/>
                             </div>
@@ -128,7 +129,7 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Border Thickness:</div>
                             <div className="col s8">
-                                <input type="range" min="4" max="50" 
+                                <Range type="range" min="4" max="50" 
                                     onChange={this.handleBorderWidth}
                                     value={this.props.logo.borderWidth}/>
                             </div>
@@ -136,17 +137,18 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Padding:</div>
                             <div className="col s8">
-                                <input type="range" min="0" max="80" 
+                                <Range type="range" min="0" max="80" 
                                     onChange={this.handlePadding}
                                     value={this.props.logo.padding}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col s4">Margin:</div>
-                            <div className="col s8">
-                                <input type="range" min="0" max="200" 
+                            <div className="col s8 ">
+                                <Range type="range" min="0" max="200" 
                                     onChange={this.handleMargin}
                                     value={this.props.logo.margin}/>
+                                
                             </div>
                         </div>
                     </div>
