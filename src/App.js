@@ -23,13 +23,13 @@ export const TransactionType = {
 export const LogoDefaults = {
   TEXT : "goLogoLo Logo",
   TEXT_COLOR : "#FF0000",
-  FONT_SIZE : 100,
+  FONT_SIZE : 200,
   BACKGROUND_COLOR : "#00FFFF",
   BORDER_COLOR: "#8A2BE2",
   BORDER_RADIUS: 8,
   BORDER_WIDTH: 10,
   PADDING: 0,
-  MARGIN: 0
+  MARGIN: 10
 }
 
 // App IS THE ROOT REACT COMPONENT

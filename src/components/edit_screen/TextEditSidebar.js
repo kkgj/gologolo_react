@@ -144,7 +144,7 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Margin:</div>
                             <div className="col s8">
-                                <input type="range" min="1" max="80" 
+                                <input type="range" min="0" max="200" 
                                     onChange={this.handleMargin}
                                     value={this.state.margin}/>
                             </div>
