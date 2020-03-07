@@ -22,10 +22,10 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav>
+      <nav className="grey darken-4">
         <div className="nav-wrapper">
-          <div  className='brand-logo' 
-                style={ {cursor: "pointer"} }
+          <div  className='brand-logo'
+                style={ {cursor: "pointer", left:"5%"} }
                 onClick={this.handleGoHome}>
             goLogoLo
           </div>
