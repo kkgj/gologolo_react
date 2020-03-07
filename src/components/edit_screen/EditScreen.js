@@ -32,7 +32,7 @@ export class EditScreen extends Component {
                 <Navbar 
                     logoKey={this.props.logo.key}
                     goToHomeCallback={this.props.goToHomeCallback} 
-                        deleteCallback={this.props.deleteCallback}
+                    deleteCallback={this.props.deleteCallback}
                 />
                 <div className="row">
                     <TextEditSidebar

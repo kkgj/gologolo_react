@@ -16,7 +16,8 @@ class TextEditSidebar extends Component {
             borderRadius : this.props.logo.borderRadius,
             borderWidth : this.props.logo.borderWidth,
             padding : this.props.logo.padding,
-            margin : this.props.logo.margin
+            margin : this.props.logo.margin,
+            input: this.props.logo.text
         }
     }
 
@@ -72,6 +73,14 @@ class TextEditSidebar extends Component {
         this.state.borderWidth,this.state.padding, this.state.margin);
     }
 
+    handleEditText = (event) => {
+        this.setState({ input: event.target.value });
+    }
+
+    handleEnter = () => {
+        this.setState({ text: this.state.input }, this.completeUserEditing);
+    }
+
     render() {
         let undoDisabled = !this.props.canUndo();
         let undoClass = "waves-effect waves-light btn-small";
@@ -84,41 +93,41 @@ class TextEditSidebar extends Component {
             redoClass +=" disabled";    
         return (
             <div className="card-panel col s4">
-                <div className="card indigo darken-4">
+                <div className="card orange darken-1">
                     <div className="card-content white-text">
                         <Modal 
-                        actions={[
-                            <Button flat modal="close" node="button" waves="green">Enter</Button>,
-                            <Button flat modal="close" node="button" waves="green">Cancel</Button>
-                        ]}
-                        bottomSheet={false}
-                        fixedFooter={false}
-                        header="EDIT LOGO TEXT"
-                        id="modal-0"
-                        options={{
-                        dismissible: true,
-                        endingTop: '10%',
-                        inDuration: 250,
-                        onCloseEnd: null,
-                        onCloseStart: null,
-                        onOpenEnd: null,
-                        onOpenStart: null,
-                        opacity: 0.5,
-                        outDuration: 250,
-                        preventScrolling: true,
-                        startingTop: '4%'
-                        }}
-                        trigger={<Button className="waves-effect waves-light btn-small" node="button">&#9998;</Button>}>
-                        <h6>
-                            Enter new logo name here: 
-                        </h6>
-                        <TextInput />
+                            actions={[
+                                <Button flat modal="close" node="button" waves="green" onClick={this.handleEnter}>Enter</Button>,
+                                <Button flat modal="close" node="button" waves="green">Cancel</Button>
+                            ]}
+                            bottomSheet={false}
+                            fixedFooter={false}
+                            header="EDIT LOGO TEXT"
+                            id="modal-0"
+                            options={{
+                            dismissible: true,
+                            endingTop: '10%',
+                            inDuration: 250,
+                            onCloseEnd: null,
+                            onCloseStart: null,
+                            onOpenEnd: null,
+                            onOpenStart: null,
+                            opacity: 0.4,
+                            outDuration: 250,
+                            preventScrolling: true,
+                            startingTop: '4%'
+                            }}
+                            trigger={<Button className="waves-effect waves-light btn-small" node="button">&#9998;</Button>}>
+                            <h6>
+                                Enter new logo name here: 
+                            </h6>
+                            <TextInput placeholder="Editing..." onChange={this.handleEditText}/>
                         </Modal>
                         <button className={undoClass} onClick={this.handleUndo}>Undo</button>
                         <button className={redoClass} onClick={this.handleRedo}>Redo</button>
                     </div>
                 </div>
-                <div className="card indigo darken-4">
+                <div className="card orange darken-1">
                     <div className="card-content white-text">
                         <span className="card-title">Text</span>
                         <div className="row">

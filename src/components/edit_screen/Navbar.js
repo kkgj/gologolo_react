@@ -26,17 +26,17 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="grey darken-4">
+      <nav className="white">
         <div className="nav-wrapper">
           <div  className='brand-logo'
-                style={ {cursor: "pointer", left: "5%"} }
+                style={ {cursor: "pointer", color: "black"} }
                 onClick={this.handleGoHome}>
             goLogoLo
           </div>
           <ul id="nav-mobile" className="right">
-            <li style={ {cursor: "pointer", right: "10%"} }
+            <li style={ {cursor: "pointer"} }
                 onClick={this.handleDeleteWork}>
-              &#128465;</li>
+            &#128465;</li>
           </ul>
         </div>
       </nav>
