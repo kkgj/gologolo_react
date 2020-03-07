@@ -382,6 +382,7 @@ class App extends Component {
           canUndo={this.canUndo}                          // TRANSACTION CALLBACK
           redoCallback={this.redo}
           canRedo={this.canRedo}
+          deleteCallback={this.deleteLogo}
 
         />;
       default:

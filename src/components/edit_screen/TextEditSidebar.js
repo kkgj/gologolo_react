@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Range, Modal, Button} from 'react-materialize'
+import {Range, Modal, Button, TextInput} from 'react-materialize'
 
 class TextEditSidebar extends Component {
     constructor(props) {
@@ -86,7 +86,34 @@ class TextEditSidebar extends Component {
             <div className="card-panel col s4">
                 <div className="card indigo darken-4">
                     <div className="card-content white-text">
-                        <button className="waves-effect waves-light btn-small">&#9998;</button>
+                        <Modal 
+                        actions={[
+                            <Button flat modal="close" node="button" waves="green">Enter</Button>,
+                            <Button flat modal="close" node="button" waves="green">Cancel</Button>
+                        ]}
+                        bottomSheet={false}
+                        fixedFooter={false}
+                        header="EDIT LOGO TEXT"
+                        id="modal-0"
+                        options={{
+                        dismissible: true,
+                        endingTop: '10%',
+                        inDuration: 250,
+                        onCloseEnd: null,
+                        onCloseStart: null,
+                        onOpenEnd: null,
+                        onOpenStart: null,
+                        opacity: 0.5,
+                        outDuration: 250,
+                        preventScrolling: true,
+                        startingTop: '4%'
+                        }}
+                        trigger={<Button className="waves-effect waves-light btn-small" node="button">&#9998;</Button>}>
+                        <h6>
+                            Enter new logo name here: 
+                        </h6>
+                        <TextInput />
+                        </Modal>
                         <button className={undoClass} onClick={this.handleUndo}>Undo</button>
                         <button className={redoClass} onClick={this.handleRedo}>Redo</button>
                     </div>
