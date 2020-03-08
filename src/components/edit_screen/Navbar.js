@@ -26,7 +26,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="white">
+      <nav className="grey lighten-5">
         <div className="nav-wrapper">
           <div  className='brand-logo'
                 style={ {cursor: "pointer", color: "black"} }

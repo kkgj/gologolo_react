@@ -17,7 +17,7 @@ class TextEditSidebar extends Component {
             borderWidth : this.props.logo.borderWidth,
             padding : this.props.logo.padding,
             margin : this.props.logo.margin,
-            input: this.props.logo.text
+            input: this.props.logo.text,
         }
     }
 
@@ -70,15 +70,19 @@ class TextEditSidebar extends Component {
         this.props.changeLogoCallback(this.props.logo, this.props.logo.key,
         this.state.text, this.state.textColor, this.state.fontSize, 
         this.state.backgroundColor, this.state.borderColor, this.state.borderRadius, 
-        this.state.borderWidth,this.state.padding, this.state.margin);
+        this.state.borderWidth, this.state.padding, this.state.margin);
     }
 
     handleEditText = (event) => {
-        this.setState({ input: event.target.value });
+        this.setState({ input: event.target.value.trim() });
     }
 
     handleEnter = () => {
-        this.setState({ text: this.state.input }, this.completeUserEditing);
+        if (this.state.input.length >= 1) {
+            this.setState({ text: this.state.input }, this.completeUserEditing); 
+        } else {
+            this.setState({ showHideClassname: true});
+        }   
     }
 
     render() {
@@ -194,7 +198,6 @@ class TextEditSidebar extends Component {
                                 <Range type="range" min="0" max="200" 
                                     onChange={this.handleMargin}
                                     value={this.props.logo.margin}/>
-                                
                             </div>
                         </div>
                     </div>
