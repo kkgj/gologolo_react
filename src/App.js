@@ -269,6 +269,7 @@ class App extends Component {
     this.setState({
       logos: nextLogos
     }, this.afterLogoDeleted);
+    //localStorage.setItem('recent_work', JSON.stringify(this.state.logos));
   }
 
   // THIS CHANGES THE LOGO
@@ -322,6 +323,7 @@ class App extends Component {
     console.log("App afterLogoDeleted logos: " + this.logosToString(this.state.logos));
     // FIRST GO HOME
     this.goToHomeScreen();
+    localStorage.setItem('recent_work', JSON.stringify(this.state.logos));
   }
 
   // THERE ARE TWO FUNCTIONS TO HELP GENERATE OUTPUT FOR DEBUGGING
