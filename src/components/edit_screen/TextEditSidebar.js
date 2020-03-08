@@ -136,7 +136,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Color:</div>
                             <div className="col s8">
                                 <input type="color"
-                                    value={this.props.logo.textColor}
+                                    value={this.props.logo.textColor || "goLogoLo Logo"}
                                     onChange={this.handleTextColorChange}/>
                             </div>
                         </div>
@@ -145,7 +145,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Font Size:</div>
                             <div className="col s8">
                                 <Range type="range" min="4" max="144" 
-                                    value={this.props.logo.fontSize} 
+                                    value={this.props.logo.fontSize || 40} 
                                     onChange={this.handleFontSizeChange}/>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Background Color:</div>
                             <div className="col s8">
                                 <input type="color"
-                                    value={this.props.logo.backgroundColor}
+                                    value={this.props.logo.backgroundColor || "#FF0000"}
                                     onChange={this.handleBackgroundColorChange}/>
                             </div>
                         </div>
@@ -162,7 +162,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Border Color:</div>
                             <div className="col s8">
                                 <input type="color"
-                                    value={this.props.logo.borderColor}
+                                    value={this.props.logo.borderColor || "#8A2BE2"}
                                     onChange={this.handleBorderColor}/>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Border Radius:</div>
                             <div className="col s8">
                                 <Range type="range" min="0" max="150" 
-                                    value={this.props.logo.borderRadius}
+                                    value={this.props.logo.borderRadius || 8}
                                     onChange={this.handleBorderRadius}/>
                             </div>
                         </div>
@@ -178,7 +178,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Border Thickness:</div>
                             <div className="col s8">
                                 <Range type="range" min="4" max="50" 
-                                    value={this.props.logo.borderWidth}
+                                    value={this.props.logo.borderWidth || 10}
                                     onChange={this.handleBorderWidth}/>
                             </div>
                         </div>
@@ -186,7 +186,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Padding:</div>
                             <div className="col s8">
                                 <Range type="range" min="0" max="80" 
-                                    value={this.props.logo.padding}
+                                    value={this.props.logo.padding || 0}
                                     onChange={this.handlePadding}/>
                             </div>
                         </div>
@@ -194,7 +194,7 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Margin:</div>
                             <div className="col s8 ">
                                 <Range type="range" min="0" max="200" 
-                                    value={this.props.logo.margin}
+                                    value={this.props.logo.margin || 10}
                                     onChange={this.handleMargin}/>
                             </div>
                         </div>
