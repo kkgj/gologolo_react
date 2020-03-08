@@ -136,17 +136,17 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Color:</div>
                             <div className="col s8">
                                 <input type="color"
-                                        onChange={this.handleTextColorChange}
-                                        value={this.props.logo.textColor}
-                                />
+                                    value={this.props.logo.textColor}
+                                    onChange={this.handleTextColorChange}/>
                             </div>
                         </div>
+                        
                         <div className="row">
                             <div className="col s4">Font Size:</div>
                             <div className="col s8">
-                                <Range type="range" min="5" max="55" 
-                                    onChange={this.handleFontSizeChange}
-                                    value={this.props.logo.fontSize} />
+                                <Range type="range" min="4" max="144" 
+                                    value={this.props.logo.fontSize} 
+                                    onChange={this.handleFontSizeChange}/>
                             </div>
                         </div>
 
@@ -154,40 +154,40 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Background Color:</div>
                             <div className="col s8">
                                 <input type="color"
-                                    onChange={this.handleBackgroundColorChange}
-                                    value={this.props.logo.backgroundColor}/>
+                                    value={this.props.logo.backgroundColor}
+                                    onChange={this.handleBackgroundColorChange}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col s4">Border Color:</div>
                             <div className="col s8">
                                 <input type="color"
-                                    onChange={this.handleBorderColor}
-                                    value={this.props.logo.borderColor}/>
+                                    value={this.props.logo.borderColor}
+                                    onChange={this.handleBorderColor}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col s4">Border Radius:</div>
                             <div className="col s8">
                                 <Range type="range" min="0" max="150" 
-                                    onChange={this.handleBorderRadius}
-                                    value={this.props.logo.borderRadius}/>
+                                    value={this.props.logo.borderRadius}
+                                    onChange={this.handleBorderRadius}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col s4">Border Thickness:</div>
                             <div className="col s8">
                                 <Range type="range" min="4" max="50" 
-                                    onChange={this.handleBorderWidth}
-                                    value={this.props.logo.borderWidth}/>
+                                    value={this.props.logo.borderWidth}
+                                    onChange={this.handleBorderWidth}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col s4">Padding:</div>
                             <div className="col s8">
                                 <Range type="range" min="0" max="80" 
-                                    onChange={this.handlePadding}
-                                    value={this.props.logo.padding}/>
+                                    value={this.props.logo.padding}
+                                    onChange={this.handlePadding}/>
                             </div>
                         </div>
                         <div className="row">
