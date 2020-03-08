@@ -194,8 +194,8 @@ class TextEditSidebar extends Component {
                             <div className="col s4">Margin:</div>
                             <div className="col s8 ">
                                 <Range type="range" min="0" max="200" 
-                                    onChange={this.handleMargin}
-                                    value={this.props.logo.margin}/>
+                                    value={this.props.logo.margin}
+                                    onChange={this.handleMargin}/>
                             </div>
                         </div>
                     </div>
