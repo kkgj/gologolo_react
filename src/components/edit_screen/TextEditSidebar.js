@@ -17,6 +17,7 @@ class TextEditSidebar extends Component {
             borderWidth : this.props.logo.borderWidth,
             padding : this.props.logo.padding,
             margin : this.props.logo.margin,
+            input : this.props.logo.text
         }
     }
 
