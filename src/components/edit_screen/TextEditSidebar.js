@@ -17,7 +17,6 @@ class TextEditSidebar extends Component {
             borderWidth : this.props.logo.borderWidth,
             padding : this.props.logo.padding,
             margin : this.props.logo.margin,
-            input: this.props.logo.text,
         }
     }
 
@@ -81,7 +80,6 @@ class TextEditSidebar extends Component {
         if (this.state.input.length >= 1) {
             this.setState({ text: this.state.input }, this.completeUserEditing); 
         } else {
-            this.setState({ showHideClassname: true});
         }   
     }
 
