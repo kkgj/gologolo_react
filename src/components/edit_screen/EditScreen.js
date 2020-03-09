@@ -26,10 +26,10 @@ export class EditScreen extends Component {
 
     handleKeyPress = (event) => {
         if(event.ctrlKey){
-            if(event.which === 90){
+            if(event.which === 90 && this.props.canUndo()){
                 console.log("Z");
                 this.props.undoCallback();
-            } else if (event.which === 89) {
+            } else if (event.which === 89 && this.props.canRedo()) {
                 console.log("Y");
                 this.props.redoCallback();
             }
