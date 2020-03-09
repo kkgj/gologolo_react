@@ -24,11 +24,23 @@ export class EditScreen extends Component {
         console.log("\tEditScreen component will unmount");
     }
 
+    handleKeyPress = (event) => {
+        if(event.ctrlKey){
+            if(event.which === 90){
+                console.log("Z");
+                this.props.undoCallback();
+            } else if (event.which === 89) {
+                console.log("Y");
+                this.props.redoCallback();
+            }
+        }
+    }
+
     render() {
         // DISPLAY WHERE WE ARE
         console.log("\tEditScreen render");
         return (
-            <div className="container">
+            <div className="container" tabIndex="0" onKeyDown={this.handleKeyPress}>
                 <Navbar 
                     logoKey={this.props.logo.key}
                     goToHomeCallback={this.props.goToHomeCallback} 
