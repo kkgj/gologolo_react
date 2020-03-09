@@ -18,6 +18,7 @@ class TextEditWorkspace extends Component {
                 right : "auto",
                 position : "absolute",
                 width : "auto",
+                whiteSpace: "pre"
                 // overflow : "scroll"
             }
         }

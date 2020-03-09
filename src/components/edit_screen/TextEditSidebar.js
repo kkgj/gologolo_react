@@ -91,11 +91,11 @@ class TextEditSidebar extends Component {
     }
 
     handleEditText = (event) => {
-        this.setState({ input: event.target.value.trim() });
+        this.setState({ input: event.target.value });
     }
 
     handleEnter = () => {
-        if (this.state.input.length >= 1) {
+        if (this.state.input.trim().length >= 1) {
             this.setState({ text: this.state.input }, this.completeUserEditing); 
         } else {
         }   
