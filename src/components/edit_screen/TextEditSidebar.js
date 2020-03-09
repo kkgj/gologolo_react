@@ -21,6 +21,23 @@ class TextEditSidebar extends Component {
         }
     }
 
+    componentDidUpdate = (prevProps) => {
+        if(this.props.logo !== prevProps.logo){
+            this.setState({
+                textColor : this.props.logo.textColor,
+                fontSize : this.props.logo.fontSize,
+                backgroundColor : this.props.logo.backgroundColor,
+                text : this.props.logo.text,
+                borderColor : this.props.logo.borderColor,
+                borderRadius : this.props.logo.borderRadius,
+                borderWidth : this.props.logo.borderWidth,
+                padding : this.props.logo.padding,
+                margin : this.props.logo.margin,
+                input : this.props.logo.text
+            });
+        }
+    }
+
     handleUndo = () => {
         this.props.undoCallback();
     }
