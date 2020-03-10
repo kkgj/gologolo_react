@@ -107,6 +107,10 @@ class TextEditSidebar extends Component {
             this.setState({ text: this.state.input }, this.completeUserEditing); 
     }
 
+    handleCancel = () => {
+        this.setState({ errorM: "" })
+    }
+
     render() {
         let undoDisabled = !this.props.canUndo();
         let undoClass = "waves-effect waves-light btn-small";
@@ -124,7 +128,7 @@ class TextEditSidebar extends Component {
                         <Modal 
                             actions={[
                                 <Button flat modal={this.state.message} node="button" waves="green" onClick={this.handleEnter}>Enter</Button>,
-                                <Button flat modal="close" node="button" waves="green">Cancel</Button>
+                                <Button flat modal="close" node="button" waves="green" onClick={this.handleCancel}>Cancel</Button>
                             ]}
                             bottomSheet={false}
                             fixedFooter={false}
