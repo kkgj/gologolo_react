@@ -17,7 +17,9 @@ class TextEditSidebar extends Component {
             borderWidth : this.props.logo.borderWidth,
             padding : this.props.logo.padding,
             margin : this.props.logo.margin,
-            input : this.props.logo.text
+            input : "",
+            message : null,
+            errorM : ""
         }
     }
 
@@ -32,8 +34,7 @@ class TextEditSidebar extends Component {
                 borderRadius : this.props.logo.borderRadius,
                 borderWidth : this.props.logo.borderWidth,
                 padding : this.props.logo.padding,
-                margin : this.props.logo.margin,
-                input : this.props.logo.text
+                margin : this.props.logo.margin
             });
         }
     }
@@ -92,13 +93,18 @@ class TextEditSidebar extends Component {
 
     handleEditText = (event) => {
         this.setState({ input: event.target.value });
+        if (event.target.value.trim().length < 1) {
+            this.setState({ message: null, errorM: "Logo name cannot be empty!" });
+        } else {
+            this.setState({ message: "close", errorM: "" });
+        }
     }
 
     handleEnter = () => {
-        if (this.state.input.trim().length >= 1) {
+        if(this.state.input.trim().length < 1)
+            this.setState({ errorM: "Logo name cannot be empty!"});
+        else
             this.setState({ text: this.state.input }, this.completeUserEditing); 
-        } else {
-        }   
     }
 
     render() {
@@ -117,12 +123,13 @@ class TextEditSidebar extends Component {
                     <div className="card-content white-text">
                         <Modal 
                             actions={[
-                                <Button flat modal="close" node="button" waves="green" onClick={this.handleEnter}>Enter</Button>,
+                                <Button flat modal={this.state.message} node="button" waves="green" onClick={this.handleEnter}>Enter</Button>,
                                 <Button flat modal="close" node="button" waves="green">Cancel</Button>
                             ]}
                             bottomSheet={false}
                             fixedFooter={false}
                             header="EDIT LOGO TEXT"
+                            footer="hi"
                             id="modal-0"
                             options={{
                             dismissible: true,
@@ -142,6 +149,9 @@ class TextEditSidebar extends Component {
                                 Enter new logo name here: 
                             </h6>
                             <TextInput placeholder="Editing..." onChange={this.handleEditText}/>
+                            <p style={{ color: 'red' }}>
+                                {this.state.errorM}
+                            </p>
                         </Modal>
                         <button className={undoClass} onClick={this.handleUndo}>Undo</button>
                         <button className={redoClass} onClick={this.handleRedo}>Redo</button>
